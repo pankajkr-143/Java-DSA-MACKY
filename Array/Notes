@@ -1,0 +1,91 @@
+PUSH GIT :
+git remote add origin https://github.com/pankajkr-143/Java-DSA-MACKY.git
+git branch -M main
+git push -u origin main
+
+-------------------------------------------------------------------------------------
+
+
+*Array*
+
+Defination of Array
+- List of elements of the same type
+  placed in a contiguous memory location
+---------------------------------------------
+
+2. Operations in Arrays
+- Create 
+- Input
+- Output
+- Update
+
+Creating a Array 
+
+dataType arrayName[]=new dataType[size];
+
+  int marks[] = new int[50];
+  int number[] = {1, 2, 3};
+  int moreNumbers[] = {4, 5, 5};
+  String fruits[] = {"apple", "mango","banana"};
+----------------------------------------------------
+
+3. Input/Output
+
+import java.util.Scanner;
+
+public class second {
+
+    public static void main(String[] args) {
+        int marks[] = new int[100];
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("length of array: "+ marks.length);
+       
+        marks[0] = sc.nextInt();
+        marks[1] = sc.nextInt();
+        marks[2] = sc.nextInt();
+
+        System.out.println("Phy : " + marks[0]);
+        System.out.println("Chem : " + marks[1]);
+        System.out.println("Math : " + marks[2]);
+
+        
+
+        // //update data
+        // marks[2]= 99;
+        // System.out.println("Chem : " + marks[2]);
+
+        // //add sub mul div using this method sign changes data
+        // marks[2]= marks[2] + 1;
+        // System.out.println("Chem : " + marks[2]);
+
+        //percentage
+        int percentage = (marks[0]+marks[1]+marks[2])/3;
+        System.out.println("percentage ="+ percentage + "%");
+
+    }
+}
+-----------------------------------------------------------------------------
+
+4. Array as function arguments
+
+public class third {
+    public static void update(int marks[]){
+        for(int i=0; i<marks.length; i++){
+            marks[i] = marks[i]+1;
+        }
+    }
+    public static void main(String[] args) {
+        int marks[] = {97, 98, 99};
+        update(marks);
+
+        for(int i=0; i<marks.length; i++){
+            System.out.println(marks[i]+" ");
+        }
+        System.out.println();
+    }
+}
+------------------------------------------------------------------------------
+
+5. 

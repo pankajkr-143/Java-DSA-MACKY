@@ -1,4 +1,3 @@
-package Array;
 
 public class third {
     public static void update(int marks[]){

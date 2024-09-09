@@ -88,4 +88,73 @@ public class third {
 }
 ------------------------------------------------------------------------------
 
-5. 
+5. Linear Search in Array
+
+Find MAX_VALUE
+
+//find the largest number in a given array :  1,2,6,3,5
+
+public class largeNum {
+    public static int findLargest(int numbers[]) {
+        int largest = Integer.MIN_VALUE; //-INFINITE
+
+        for(int i=0; i<numbers.length; i++){
+            if (largest<numbers[i]){
+                largest = numbers[i];
+            }
+        }
+        return largest;
+    }
+    public static void main(String[] args) {
+        int number[] = {1,2,6,3,5};
+        System.out.println("largest value is : " +findLargest(number));
+    }
+}
+
+
+public class smallNumLinear {
+    public static int findLargest(int numbers[]) {
+        int largest = Integer.MIN_VALUE; //-INFINITE
+        int smallest = Integer.MAX_VALUE; //-INFINITE
+
+        for(int i=0; i<numbers.length; i++){
+            if (largest<numbers[i]){
+                largest = numbers[i];
+            }
+            if (smallest>numbers[i]){
+                smallest = numbers[i];
+            }
+        }
+        System.out.println("smallest value is : " +smallest);
+        return largest;
+    }
+    public static void main(String[] args) {
+        int number[] = {1,0,2,6,3,5};
+        System.out.println("largest value is : " +findLargest(number));
+    }
+}
+-------------------------------------------------------------------------------------------------
+
+6. Binary Search in Java
+
+Binary search is one of the searching techniques applied when the input is sorted here we are focusing on finding the middle element that acts as a reference frame whether to go left or right to it as the elements are already sorted. This searching helps in optimizing the search technique with every iteration is referred to as binary search and readers do stress over it as it is indirectly applied in solving questions.
+
+Binary-Search
+
+
+Binary Search Algorithm in Java
+
+Start
+Take input array and Target
+Initialise start = 0 and end = (array size -1)
+Intialise mid variable
+mid = (start+end)/2
+if array[ mid ] == target then return mid
+if array[ mid ] < target then start = mid+1
+if array[ mid ] > target then end = mid-1
+if start<=end then goto step 5
+return -1 as Not element found
+Exit
+
+------------------------------------------------------------------------------------------
+
